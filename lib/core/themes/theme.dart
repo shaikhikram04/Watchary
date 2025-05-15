@@ -20,4 +20,16 @@ class WTheme {
     elevatedButtonTheme: WElevatedButtonTheme.lightElevatedButtonTheme,
     chipTheme: WChipTheme.lightChipTheme,
   );
+
+  static ThemeData darkTheme = ThemeData(
+    fontFamily: 'Poppins',
+    brightness: Brightness.dark,
+    primaryColor: WColors.primary,
+    scaffoldBackgroundColor: WColors.black,
+    colorScheme: WColorScheme.darkColorScheme,
+    textTheme: WTextTheme.darkTextTheme,
+    appBarTheme: WAppBarTheme.darkAppBarTheme,
+    elevatedButtonTheme: WElevatedButtonTheme.darkElevatedButtonTheme,
+    chipTheme: WChipTheme.darkChipTheme,
+  );
 }
