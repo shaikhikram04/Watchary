@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:watchary/core/themes/theme.dart';
+import 'package:watchary/features/authentication/screens/welcome.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class WatcharyApp extends StatelessWidget {
+  const WatcharyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      title: 'Watchary',
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.dark,
       theme: WTheme.lightTheme,
       darkTheme: WTheme.darkTheme,
+      home: const WelcomeScreen(),
     );
   }
 }
+
+
+
+
+
+
+

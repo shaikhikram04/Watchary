@@ -30,7 +30,7 @@ void main() {
             Devices.ios.iPhone13Mini,
             Devices.ios.iPhoneSE,
           ],
-          builder: (BuildContext context) => const MyApp(),
+          builder: (BuildContext context) => const WatcharyApp(),
         )
-      : const MyApp());
+      : const WatcharyApp());
 }

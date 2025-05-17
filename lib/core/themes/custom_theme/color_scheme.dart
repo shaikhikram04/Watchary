@@ -12,6 +12,7 @@ class WColorScheme {
     onSecondary: WColors.black,
     error: Colors.redAccent,
     onError: Colors.white,
+    brightness: Brightness.light,
   );
 
   static final darkColorScheme = ColorScheme.fromSeed(
@@ -22,5 +23,6 @@ class WColorScheme {
     onSecondary: WColors.black,
     error: Colors.redAccent,
     onError: Colors.white,
+    brightness: Brightness.dark,
   );
 }
