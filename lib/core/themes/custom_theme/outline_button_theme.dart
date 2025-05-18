@@ -2,27 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:watchary/core/constants/colors.dart';
 import 'package:watchary/core/themes/custom_theme/text_theme.dart';
 
-class IOutlinedButtonTheme {
-  const IOutlinedButtonTheme._();
+class WOutlinedButtonTheme {
+  const WOutlinedButtonTheme._();
 
-  static final lightOutlinedButtonTheme = OutlinedButtonThemeData(
+  static final light = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-      elevation: 0,
-      foregroundColor: WColors.black,
-      side: const BorderSide(color: WColors.primary),
-      textStyle: WTextTheme.lightTextTheme.titleLarge,
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+      foregroundColor: WColors.primary,
+      side: BorderSide(color: WColors.primary, width: 1.5),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(14),
+      ),
+      textStyle: WTextTheme.light.titleLarge,
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
     ),
   );
 
-  static final darkOutlinedButtonTheme = OutlinedButtonThemeData(
+  static final dark = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-        elevation: 0,
-        foregroundColor: WColors.white,
-        side: const BorderSide(color: WColors.primary),
-        textStyle: WTextTheme.darkTextTheme.titleLarge,
-        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14))),
+      foregroundColor: WColors.secondary,
+      side: BorderSide(color: WColors.secondary, width: 1.5),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(14),
+      ),
+      textStyle: WTextTheme.dark.titleLarge,
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+    ),
   );
 }

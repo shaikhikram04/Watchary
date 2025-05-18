@@ -4,25 +4,25 @@ import 'package:watchary/core/constants/colors.dart';
 class WColorScheme {
   const WColorScheme._();
 
-  static final lightColorScheme = ColorScheme.fromSeed(
-    seedColor: WColors.primary,
+  static final lightColorScheme = ColorScheme.light(
     primary: WColors.primary,
-    onPrimary: WColors.white,
     secondary: WColors.secondary,
-    onSecondary: WColors.black,
-    error: Colors.redAccent,
-    onError: Colors.white,
-    brightness: Brightness.light,
+    tertiary: WColors.tertiary,
+    error: WColors.error,
+    surface: WColors.light.surface,
+    onPrimary: WColors.light.textPrimary,
+    onSecondary: WColors.light.textPrimary,
+    onSurface: WColors.light.textPrimary,
   );
 
-  static final darkColorScheme = ColorScheme.fromSeed(
-    seedColor: WColors.primary,
-    primary: WColors.primary,
-    onPrimary: WColors.white,
-    secondary: WColors.secondary,
-    onSecondary: WColors.black,
-    error: Colors.redAccent,
-    onError: Colors.white,
-    brightness: Brightness.dark,
+  static final darkColorScheme = ColorScheme.dark(
+    primary: WColors.secondary, // Using secondary as primary in dark mode
+    secondary: WColors.tertiary,
+    tertiary: WColors.coral,
+    error: WColors.error,
+    surface: WColors.dark.surface,
+    onPrimary: Colors.white,
+    onSecondary: Colors.white,
+    onSurface: WColors.dark.textPrimary,
   );
 }

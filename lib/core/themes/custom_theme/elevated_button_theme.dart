@@ -7,31 +7,29 @@ class WElevatedButtonTheme {
 
   static ElevatedButtonThemeData lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      elevation: 0,
-      backgroundColor: WColors.secondary,
-      foregroundColor: WColors.white,
-      disabledBackgroundColor: Colors.grey,
-      disabledForegroundColor: Colors.grey,
+      elevation: 4,
+      backgroundColor: WColors.light.buttonBackground,
+      foregroundColor: Colors.white,
+      shadowColor: WColors.primary.withValues(alpha: 0.4),
+      disabledBackgroundColor: WColors.light.buttonDisabled,
+      disabledForegroundColor: WColors.light.textSecondary,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      side: const BorderSide(color: WColors.secondary),
       padding: const EdgeInsets.symmetric(vertical: 18),
-      textStyle: WTextTheme.lightTextTheme.titleMedium,
+      textStyle: WTextTheme.light.titleMedium,
     ),
   );
 
   static ElevatedButtonThemeData darkElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      elevation: 0,
-      backgroundColor: WColors.secondary,
+      backgroundColor: WColors.dark.buttonBackground,
       foregroundColor: Colors.white,
-      disabledBackgroundColor: Colors.grey,
-      disabledForegroundColor: Colors.grey,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
-      side: const BorderSide(color: WColors.primary),
+      elevation: 8,
+      shadowColor: WColors.secondary.withValues(alpha: 0.4),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       padding: const EdgeInsets.symmetric(vertical: 18),
-      textStyle: WTextTheme.darkTextTheme.titleMedium,
+      disabledBackgroundColor: WColors.dark.buttonDisabled,
+      disabledForegroundColor: WColors.dark.textSecondary,
+      textStyle: WTextTheme.dark.titleMedium,
     ),
   );
 }

@@ -5,18 +5,20 @@ class WChipTheme {
   const WChipTheme._();
 
   static ChipThemeData lightChipTheme = ChipThemeData(
-    disabledColor: Colors.grey.withValues(alpha: 0.4),
-    labelStyle: const TextStyle(color: Colors.black),
+    backgroundColor: WColors.light.chipBackground,
+    disabledColor: WColors.light.buttonDisabled,
+    labelStyle:  TextStyle(color: WColors.light.textPrimary),
     selectedColor: WColors.primary,
     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-    checkmarkColor: Colors.white,
+    checkmarkColor: WColors.light.textPrimary,
   );
 
   static ChipThemeData darkChipTheme = ChipThemeData(
-    disabledColor: Colors.grey.withValues(alpha: 0.4),
-    labelStyle: const TextStyle(color: Colors.white),
-    selectedColor: WColors.primary,
+    backgroundColor: WColors.dark.chipBackground,
+    disabledColor: WColors.dark.buttonDisabled,
+    labelStyle: TextStyle(color: WColors.dark.textPrimary),
+    selectedColor: WColors.secondary,
     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-    checkmarkColor: Colors.white,
+    checkmarkColor: WColors.dark.textPrimary,
   );
 }
