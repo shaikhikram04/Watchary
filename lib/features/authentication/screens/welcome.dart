@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watchary/core/constants/colors.dart';
+import 'package:watchary/core/constants/sizes.dart';
 import 'package:watchary/features/authentication/screens/login.dart';
 import 'package:watchary/features/authentication/screens/signup_strp_1.dart';
 
@@ -14,15 +15,12 @@ class WelcomeScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
-              WColors.light.scaffold,
-              WColors.light.surfaceVariant,
-            ],
+            colors: [WColors.light.scaffold, WColors.light.surfaceVariant],
           ),
         ),
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            padding: const EdgeInsets.symmetric(horizontal: WSizes.defaultSpace),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -36,17 +34,17 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 24),
+                const SizedBox(height: WSizes.defaultSpace),
                 Text(
                   'Your Ultimate Movie Companion',
                   style: Theme.of(context).textTheme.titleLarge,
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 64),
+                const SizedBox(height: WSizes.spaceBtwSections * 2),
                 // Login Button
                 SizedBox(
                   width: double.infinity,
-                  height: 50,
+                  height: WSizes.buttonHeight,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -58,20 +56,14 @@ class WelcomeScreen extends StatelessWidget {
                             const end = Offset.zero;
                             const curve = Curves.easeInOut;
                             var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-                            return SlideTransition(
-                              position: animation.drive(tween),
-                              child: child,
-                            );
+                            return SlideTransition(position: animation.drive(tween), child: child);
                           },
                         ),
                       );
                     },
-                    child: const Text(
+                    child: Text(
                       'Login',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),
                     ),
                   ),
                 ),
@@ -79,7 +71,7 @@ class WelcomeScreen extends StatelessWidget {
                 // Sign Up Button
                 SizedBox(
                   width: double.infinity,
-                  height: 50,
+                  height: WSizes.buttonHeight,
                   child: OutlinedButton(
                     onPressed: () {
                       Navigator.push(
@@ -99,12 +91,9 @@ class WelcomeScreen extends StatelessWidget {
                         ),
                       );
                     },
-                    child: const Text(
+                    child: Text(
                       'Create Account',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ),
                 ),
