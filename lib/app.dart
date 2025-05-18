@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:watchary/core/themes/theme.dart';
 import 'package:watchary/features/authentication/screens/welcome.dart';
 
@@ -11,17 +10,10 @@ class WatcharyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Watchary',
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       theme: WTheme.lightTheme,
       darkTheme: WTheme.darkTheme,
       home: const WelcomeScreen(),
     );
   }
 }
-
-
-
-
-
-
-
