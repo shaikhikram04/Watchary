@@ -1,5 +1,6 @@
 // Custom Reusable TextField Widget
 import 'package:flutter/material.dart';
+import 'package:watchary/core/constants/colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -27,11 +28,12 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       keyboardType: keyboardType,
       obscureText: obscureText,
-      style: const TextStyle(color: Colors.white),
+      style: const TextStyle(color: WColors.primary),
       decoration: InputDecoration(
         hintText: hintText,
-        prefixIcon: Icon(prefixIcon, color: Colors.white70),
+        prefixIcon: Icon(prefixIcon, color: WColors.primary),
         suffixIcon: suffixIcon,
+        errorStyle: Theme.of(context).textTheme.labelSmall!.copyWith(color: WColors.error),
       ),
       validator: validator,
     );

@@ -44,7 +44,6 @@ class WelcomeScreen extends StatelessWidget {
                 // Login Button
                 SizedBox(
                   width: double.infinity,
-                  height: WSizes.buttonHeight,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -71,7 +70,6 @@ class WelcomeScreen extends StatelessWidget {
                 // Sign Up Button
                 SizedBox(
                   width: double.infinity,
-                  height: WSizes.buttonHeight,
                   child: OutlinedButton(
                     onPressed: () {
                       Navigator.push(
