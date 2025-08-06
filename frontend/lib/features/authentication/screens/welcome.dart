@@ -3,6 +3,7 @@ import 'package:watchary/core/constants/colors.dart';
 import 'package:watchary/core/constants/sizes.dart';
 import 'package:watchary/features/authentication/screens/login.dart';
 import 'package:watchary/features/authentication/screens/signup_strp_1.dart';
+import 'package:watchary/features/authentication/widgets/form_submit_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -42,35 +43,33 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: WSizes.spaceBtwSections * 2),
                 // Login Button
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        PageRouteBuilder(
-                          pageBuilder: (context, animation, secondaryAnimation) => const LoginScreen(),
-                          transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                            const begin = Offset(1.0, 0.0);
-                            const end = Offset.zero;
-                            const curve = Curves.easeInOut;
-                            var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-                            return SlideTransition(position: animation.drive(tween), child: child);
-                          },
-                        ),
-                      );
-                    },
-                    child: Text(
-                      'Login',
-                      style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),
-                    ),
-                  ),
+                FormSubmitButton(
+                  text: 'Login',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) => const LoginScreen(),
+                        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                          const begin = Offset(1.0, 0.0);
+                          const end = Offset.zero;
+                          const curve = Curves.easeInOut;
+                          var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+                          return SlideTransition(position: animation.drive(tween), child: child);
+                        },
+                      ),
+                    );
+                  },
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: WSizes.spaceBtwItems),
                 // Sign Up Button
                 SizedBox(
                   width: double.infinity,
                   child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      minimumSize: const Size(double.infinity, WSizes.buttonHeight),
+                      padding: const EdgeInsets.symmetric(horizontal: WSizes.md, vertical: WSizes.xs),
+                    ),
                     onPressed: () {
                       Navigator.push(
                         context,

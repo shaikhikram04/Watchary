@@ -38,14 +38,14 @@ class WSizes {
   static const double borderRadiusSm = 4.0;
   static const double borderRadiusMd = 8.0;
   static const double borderRadiusLg = 12.0;
+  static const double borderRadiusXl = 16.0;
+  static const double borderRadiusXxl = 24.0;
 
   //* Divider height
   static const double dividerHeight = 1.0;
 
-  //* Product item dimensions
-  static const double productImageSize = 120.0;
-  static const double productImageRadius = 16.0;
-  static const double productItemHeight = 160.0;
+  //* image dimensions
+  static const double logoImageSize = 120.0;
 
   //* Input Field
   static const double inputFieldRadius = 12.0;
