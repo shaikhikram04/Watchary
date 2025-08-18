@@ -159,7 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   'Sign Up',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: WColors.secondary,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                         decoration: TextDecoration.underline,
                         decorationColor: WColors.secondary,
                       ),
